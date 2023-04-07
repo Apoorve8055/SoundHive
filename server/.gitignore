@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+*.pid
+
+# Compiled output
+dist/
+build/
+
+# Test coverage
+coverage/
+
+# System files
+.DS_Store
+Thumbs.db
