@@ -1,7 +1,7 @@
 ﻿Here's a list of All stories to achieve this project for front-end and backend development, following the right sequence:
 
-- [ ] Set up the development environment
-- [ ] Create React app and install required dependencies
+- [x] Set up the development environment
+- [x] Create React app and install required dependencies
 - [ ] Create the landing page
 - [ ] Implement the registration page
 - [ ] Implement email verification for registration
