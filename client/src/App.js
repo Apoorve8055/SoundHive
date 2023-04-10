@@ -1,9 +1,11 @@
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./router/routes";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>SoundHive</h1>
+      <RouterProvider router={routes} />
     </div>
   );
 }
