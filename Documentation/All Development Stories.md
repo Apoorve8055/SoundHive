@@ -3,8 +3,12 @@
 - [x] Set up the development environment
 - [x] Create React app and install required dependencies
 - [ ] Create the landing page
+- [ ] Create the Error page
+- [ ] Create the Login page
+- [ ] Create the registration page
 - [ ] Implement the registration page
 - [ ] Implement email verification for registration
+- [ ] Implement the Login page
 - [ ] Create the user dashboard page
 - [ ] Implement the broadcasting now section on the dashboard page
 - [ ] Implement the join space feature
