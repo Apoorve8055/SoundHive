@@ -12,6 +12,8 @@ SoundHive/
 ├── src/
 │   ├── assets/
 │   │   └── images/
+│   ├── constant/
+│   │   └── ErrorCodes
 │   ├── components/
 │   │   ├── auth/
 │   │   │   ├── ForgotPassword/
@@ -26,7 +28,7 @@ SoundHive/
 │   │   └── Toolbar/
 │   ├── pages/
 │   │   ├── errors/
-│   │   │   └── 404ErrorPage/
+│   │   │   └── ErrorPage/
 │   │   ├── public/
 │   │   │   ├── LandingPage/
 │   │   │   ├── LoginPage/
