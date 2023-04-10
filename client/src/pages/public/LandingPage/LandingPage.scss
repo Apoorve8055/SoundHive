@@ -1,0 +1,130 @@
+@use "../../../utils/mixins/mediaQueries.scss" as *;
+
+.landing-page {
+  height: 100vh;
+  background-color: #f3f3f3;
+  color: aqua;
+
+  .splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .fade-out {
+      opacity: 1;
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+
+  .main {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      color: #221f14;
+      background-color: #f1efe3;
+
+      .logo {
+        font-size: 1.6rem;
+        font-weight: bolder;
+      }
+
+      .menu {
+        visibility: hidden;
+        .menu-items {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          .item {
+            color: #221f14;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          .signin {
+            padding: 8px 24px;
+            color: #fff;
+            background-color: #df6160;
+            border-radius: 24px;
+            cursor: pointer;
+          }
+        }
+
+        @include lg {
+          flex-direction: row;
+          height: auto;
+          visibility: visible;
+        }
+      }
+
+      .SideMenuWrap {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #221f14;
+        transform: translateX(100%);
+        transition: transform 0.2s ease;
+        z-index: 10;
+
+        .menu-items {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .item {
+          color: #fff;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        .icon {
+          padding-top: 1rem;
+          padding-right: 1rem;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
+      .hide {
+        transform: translateX(0);
+        transition: transform 0.2s ease;
+      }
+
+      .menuIcon {
+        font-size: 1.8rem;
+        font-weight: 500;
+        cursor: pointer;
+
+        @include lg {
+          display: none;
+        }
+      }
+    }
+
+    .home {
+    }
+
+    .about {
+    }
+
+    .page {
+      height: 100vh;
+    }
+  }
+}

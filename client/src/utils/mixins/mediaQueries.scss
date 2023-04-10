@@ -1,0 +1,22 @@
+// We are using mobile-first approach
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
