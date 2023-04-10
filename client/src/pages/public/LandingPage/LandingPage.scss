@@ -1,9 +1,12 @@
 @use "../../../utils/mixins/mediaQueries.scss" as *;
 
+// Define color variables
+$primary-color: #221f14;
+$secondary-color: #f1efe3;
+
 .landing-page {
   height: 100vh;
-  background-color: #f3f3f3;
-  color: aqua;
+  color: $primary-color;
 
   .splash-container {
     display: flex;
@@ -32,8 +35,8 @@
       display: flex;
       justify-content: space-between;
       padding: 1rem;
-      color: #221f14;
-      background-color: #f1efe3;
+      color: $primary-color;
+      background-color: $secondary-color;
 
       .logo {
         font-size: 1.6rem;
@@ -48,16 +51,16 @@
           align-items: center;
           gap: 24px;
           .item {
-            color: #221f14;
+            color: $primary-color;
             font-size: 1.2rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
           }
 
           .signin {
             padding: 8px 24px;
             color: #fff;
-            background-color: #df6160;
+            background-color: $primary-color;
             border-radius: 24px;
             cursor: pointer;
           }
@@ -77,7 +80,7 @@
         right: 0;
         bottom: 0;
         width: 250px;
-        background-color: #221f14;
+        background-color: $primary-color;
         transform: translateX(100%);
         transition: transform 0.2s ease;
         z-index: 10;
@@ -119,13 +122,113 @@
     }
 
     .home {
+      color: $primary-color;
+      background-color: $secondary-color;
+
+      .home-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem;
+        background-image: url(../../../assets/images/Background-image.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          width: 60vw;
+          background-color: #ffffff42;
+          padding: 3rem;
+          border-radius: 24px;
+          box-shadow: 1px 8px 16px $primary-color 0.6;
+          .heading {
+            font-size: 1.6rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include lg {
+              font-size: 2.4rem;
+            }
+          }
+          p {
+            word-wrap: break-word;
+            font-weight: 500;
+            font-size: 0.8rem;
+
+            @include lg {
+              font-size: 1.1rem;
+            }
+          }
+          .get-start-btn {
+            padding: 1rem;
+            background-color: $primary-color;
+            color: $secondary-color;
+            font-size: 0.6rem;
+            border-radius: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            @include lg {
+              font-size: 1rem;
+            }
+          }
+          @include lg {
+            gap: 24px;
+            width: 40vw;
+          }
+        }
+      }
     }
 
     .about {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: $secondary-color;
+      .aboutus-heading {
+        height: 10px;
+        background-color: $primary-color;
+      }
+      .aboutus-details {
+        height: 100vh;
+        background-image: url(../../../assets/images/About.jpg);
+        background-position: center;
+        background-size: cover;
+        .contrast {
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .card {
+            width: 60vw;
+            background-color: $primary-color;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 1px 8px 16px $primary-color 0.6;
+            color: $secondary-color;
+            font-weight: 500;
+            font-size: 0.8rem;
+            @include lg {
+              font-size: 1rem;
+              width: 40vw;
+            }
+          }
+        }
+      }
     }
 
     .page {
-      height: 100vh;
+      //   height: 100vh;
     }
   }
 }
