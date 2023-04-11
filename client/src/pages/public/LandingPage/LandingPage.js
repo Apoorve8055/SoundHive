@@ -138,7 +138,7 @@ const LandingPage = () => {
   );
 };
 
-const MenuItems = ({ toggle }) => {
+const MenuItems = ({ toggle = () => {} }) => {
   const navigate = useNavigate();
   const itemHandeler = useCallback(
     (id) => {
