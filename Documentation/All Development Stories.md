@@ -3,7 +3,7 @@
 - [x] Set up the development environment
 - [x] Create React app and install required dependencies
 - [x] Create the landing page
-- [ ] Create the Error page
+- [x] Create the Error page
 - [ ] Create the Login page
 - [ ] Create the registration page
 - [ ] Implement the registration page
