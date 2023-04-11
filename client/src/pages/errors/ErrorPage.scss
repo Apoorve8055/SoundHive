@@ -1,0 +1,63 @@
+@use "../../utils/colors/colors" as *;
+@use "../../utils/mixins/mediaQueries.scss" as *;
+
+.error-container {
+  height: 100vh;
+  background-color: $secondary-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .error-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 24px;
+
+    .error-robot-img {
+      height: 200px;
+      width: 200px;
+      padding: 1rem;
+    }
+    .error-details {
+      height: 200px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-direction: column;
+      h1 {
+        font-size: 1.6rem;
+        margin: 0;
+      }
+      padding-right: 1rem;
+      h5 {
+        letter-spacing: 0.13rem;
+        margin: 0;
+      }
+      .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 0.5rem;
+        color: #a67c52;
+        padding: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    @include lg {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
