@@ -6,9 +6,6 @@
 - [x] Create the Error page
 - [x] Create the Login page
 - [x] Create the registration page
-- [ ] Setup firebase
-- [ ] Implement the registration page
-- [ ] Implement the Login page
 - [ ] Create the user dashboard page
 - [ ] Implement the broadcasting now section on the dashboard page
 - [ ] Implement the join space feature
