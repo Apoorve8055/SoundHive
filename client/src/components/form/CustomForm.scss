@@ -1,0 +1,32 @@
+@import "../../utils/colors/colors";
+@import "../../utils/mixins/mediaQueries.scss";
+
+.field-group {
+  width: calc(100vw - 20vw);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 1rem;
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .item {
+      padding: 1rem;
+      border: none;
+    }
+    .text-danger {
+      font-size: 0.9rem;
+      color: red;
+    }
+  }
+  .submit {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 1rem;
+  }
+
+  @include lg {
+    width: calc(100vw - 70vw);
+  }
+}

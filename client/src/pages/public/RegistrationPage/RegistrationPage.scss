@@ -15,26 +15,7 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     border-radius: 24px;
     background-color: $secondary-color;
-    .field-group {
-      width: calc(100vw - 20vw);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin: 1rem;
-      .item {
-        padding: 1rem;
-        border: none;
-      }
-      .submit {
-        background-color: $primary-color;
-        color: $secondary-color;
-        padding: 1rem;
-      }
 
-      @include lg {
-        width: calc(100vw - 70vw);
-      }
-    }
     .other-group {
       .urlLink {
         padding: 1rem;
