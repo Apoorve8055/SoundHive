@@ -4,10 +4,10 @@
 - [x] Create React app and install required dependencies
 - [x] Create the landing page
 - [x] Create the Error page
-- [ ] Create the Login page
-- [ ] Create the registration page
+- [x] Create the Login page
+- [x] Create the registration page
+- [ ] Setup firebase
 - [ ] Implement the registration page
-- [ ] Implement email verification for registration
 - [ ] Implement the Login page
 - [ ] Create the user dashboard page
 - [ ] Implement the broadcasting now section on the dashboard page
