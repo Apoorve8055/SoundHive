@@ -1,0 +1,37 @@
+@import "../../utils/colors/colors";
+@import "../../utils/mixins/mediaQueries.scss";
+
+.master-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #f1eee6;
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #f1eee6;
+    transform: translateX(-100%); /* move the sidebar off screen initially */
+    transition: transform 0.2s ease;
+    z-index: 10;
+    @include lg {
+      width: calc(100vw - 78vw);
+      transform: translateX(0); /* show the sidebar on larger screens */
+    }
+  }
+  .open-menu {
+    display: block;
+    transform: translateX(0);
+  }
+  .main {
+    width: 100vw;
+    background-color: #f9f9f9;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+
+    .body {
+    }
+  }
+}
