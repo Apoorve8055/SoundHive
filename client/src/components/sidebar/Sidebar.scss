@@ -1,0 +1,111 @@
+@import "../../utils/colors/colors";
+@import "../../utils/mixins/mediaQueries.scss";
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #f1eee6;
+  transform: translateX(-100%); /* move the sidebar off screen initially */
+  transition: transform 0.2s ease;
+  z-index: 10;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    .top-menu {
+      .close-btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem;
+        gap: 16px;
+
+        .close-icon {
+          font-size: 2rem;
+          font-weight: bolder;
+
+          @include lg {
+            display: none;
+          }
+        }
+
+        .user-img-name {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 16px;
+          .name {
+            font-size: 1.5rem;
+            font-weight: bolder;
+          }
+        }
+      }
+
+      .sidebar-menu {
+        display: flex;
+        flex-direction: column;
+
+        .sidebar-menu-wrapper {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          padding-left: 1.6rem;
+          padding-top: 0.7rem;
+          padding-bottom: 0.7rem;
+          cursor: pointer;
+          color: $primary-color;
+          font-weight: bold;
+          gap: 16px;
+
+          .sidebar-menu-icon {
+            padding: 0.6rem;
+            background-color: #fff;
+            border-radius: 24px;
+          }
+          .active {
+            color: #fff;
+            background-color: #df6160;
+          }
+        }
+        .active-menu {
+          border-right: 8px solid #df6160;
+        }
+      }
+    }
+
+    .logout-menu {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      padding-left: 1.6rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      background-color: $primary-color;
+      cursor: pointer;
+      color: $primary-color;
+      font-weight: bold;
+      gap: 16px;
+      color: #fff;
+
+      .logout-menu-icon {
+        padding: 0.6rem;
+        background-color: $primary-color;
+        border-radius: 24px;
+      }
+    }
+  }
+
+  @include lg {
+    position: relative;
+    width: calc(100vw - 78vw);
+    transform: translateX(0); /* show the sidebar on larger screens */
+  }
+}
+.open-menu {
+  display: block;
+  transform: translateX(0);
+}

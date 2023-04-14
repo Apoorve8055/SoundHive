@@ -3,10 +3,11 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import { LandingPage, LoginPage, RegistrationPage } from "../pages/public";
 import { DashboardPage } from "../pages/private";
 import ErrorPage from "../pages/errors/ErrorPage";
+import MasterLayout from "../components/masterLayout/MasterLayout";
 
 const ProtectedRoute = ({ children }) => {
-  const [auth, setAuth] = useState(false);
-  return auth ? children : <Navigate to="/error" />;
+  const [auth, setAuth] = useState(true);
+  return auth ? children : <Navigate to="/error/401" />;
 };
 
 export const routes = createBrowserRouter([
@@ -26,9 +27,19 @@ export const routes = createBrowserRouter([
     path: "/dashboard",
     element: (
       <ProtectedRoute>
-        <DashboardPage />
+        <MasterLayout />
       </ProtectedRoute>
     ),
+    children: [
+      {
+        path: "",
+        element: <DashboardPage />,
+      },
+      {
+        path: "profile",
+        element: <h1>Profile</h1>,
+      },
+    ],
   },
   {
     path: "/error/:code?",

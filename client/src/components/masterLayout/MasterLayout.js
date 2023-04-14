@@ -1,24 +1,20 @@
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import "./MasterLayout.scss";
 import Header from "../header/Header";
-import { useCallback, useState } from "react";
+import Sidebar from "../sidebar/Sidebar";
+import "./MasterLayout.scss";
 
 const MasterLayout = () => {
-  const [showSidebar, toggleShowSidebar] = useState(false);
-
-  const handleMenuClick = useCallback(() => {
-    toggleShowSidebar((prev) => !prev);
-  }, []);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <div className="master-container">
-      <div className={`sidebar ${showSidebar && "open-menu"}`}>
-        <h1 onClick={() => toggleShowSidebar(!showSidebar)}>Close Menu</h1>
-        <h1>User Avatar - Name</h1>
-        <h1>Sidebar</h1>
-      </div>
+      <Sidebar
+        showSidebar={showSidebar}
+        toggleSidebar={() => setShowSidebar((prev) => !prev)}
+      />
       <div className="main">
-        <Header onMenuClick={handleMenuClick} />
+        <Header onMenuClick={() => setShowSidebar((prev) => !prev)} />
         <div className="body">
           <Outlet />
         </div>
