@@ -4,6 +4,7 @@ import { LandingPage, LoginPage, RegistrationPage } from "../pages/public";
 import { DashboardPage } from "../pages/private";
 import ErrorPage from "../pages/errors/ErrorPage";
 import MasterLayout from "../components/masterLayout/MasterLayout";
+import JoinSpace from "../pages/private/JoinSpace/JoinSpace";
 
 const ProtectedRoute = ({ children }) => {
   const [auth, setAuth] = useState(true);
@@ -34,6 +35,10 @@ export const routes = createBrowserRouter([
       {
         path: "",
         element: <DashboardPage />,
+      },
+      {
+        path: "join/:id",
+        element: <JoinSpace />,
       },
       {
         path: "profile",
