@@ -2,8 +2,53 @@
 @import "../../../utils/mixins/mediaQueries.scss";
 
 .dashboard-container {
-  .sidebar {
-  }
-  .main {
+  display: flex;
+  flex-direction: column;
+
+  .space {
+    padding-top: 1rem;
+    padding-right: 0rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    color: $primary-color;
+    .heading {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      gap: 8px;
+      .live-icon {
+        color: #df6160;
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+      .offline-icon {
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+    }
+    .space-area {
+      display: flex;
+      gap: 16px;
+      padding-top: 1.6rem;
+      padding-bottom: 1.6rem;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 3px;
+      }
+      @include lg {
+        width: 80vw;
+        overflow-x: scroll;
+      }
+    }
   }
 }

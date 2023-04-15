@@ -1,0 +1,101 @@
+@import "../../utils/colors/colors";
+@import "../../utils/mixins/mediaQueries";
+
+.space-card {
+  border-radius: 24px;
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  min-width: 260px;
+  max-width: 360px;
+
+  .space-details {
+    padding: 0.8rem;
+    background-color: #f1eee6;
+    border-radius: 24px 24px 0 0;
+
+    .space-title {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      color: $primary-color;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      padding: 0.8rem 0;
+    }
+
+    .subtext {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #221f14cf;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+
+  .space-additional-details {
+    padding: 0.8rem;
+    background-color: #fff;
+    border-radius: 0 0 24px 24px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    .owner {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #221f149c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      .bookmark {
+        color: #2dad5e;
+        font-size: 1.6rem;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+
+    .live-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+
+      .live-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .live {
+          padding: 0.3rem;
+          background-color: #2dad5e;
+          font-weight: bold;
+          border-radius: 50px;
+        }
+      }
+
+      .join {
+        padding: 0.4rem 1rem;
+        color: #f1eee6;
+        font-weight: bold;
+        background-color: #2dad5e;
+        border-radius: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include lg {
+    width: 100%;
+    min-width: 400px;
+  }
+}
+
+.card-width {
+  @include lg {
+    min-width: 200px;
+  }
+}
