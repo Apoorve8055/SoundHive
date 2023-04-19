@@ -9,6 +9,7 @@ import {
   IoPerson,
 } from "react-icons/io5";
 import "./Sidebar.scss";
+import { useNavigate } from "react-router-dom";
 
 const SideMenu = [
   { name: "Home", url: "/dashboard", icon: IoHomeSharp },
@@ -19,6 +20,7 @@ const SideMenu = [
 
 const Sidebar = ({ showSidebar, toggleSidebar }) => {
   const [activeMenu, setActiveMenu] = useState(0);
+  const navigate = useNavigate();
 
   const handleActiveMenu = (index) => {
     setActiveMenu(index);
@@ -55,8 +57,9 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
             ))}
           </div>
         </div>
-        <div className="logout-menu">
-          <IoLogOut className="logout-menu-icon" /> Log Out
+        <div className="logout-menu" onClick={() => navigate("/")}>
+          <IoLogOut className="logout-menu-icon" />
+          Log Out
         </div>
       </div>
     </div>

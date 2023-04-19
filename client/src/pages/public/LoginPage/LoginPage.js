@@ -9,6 +9,7 @@ const LoginPage = () => {
 
   const handleSubmit = useCallback((values, { setSubmitting }) => {
     console.log(values);
+    navigate("/dashboard");
     setSubmitting(false);
   }, []);
 
