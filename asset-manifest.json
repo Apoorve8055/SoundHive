@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/SoundHive/static/css/main.cea8241d.css",
+    "main.js": "/SoundHive/static/js/main.03d6fdc1.js",
+    "static/js/58.d7aa85d0.chunk.js": "/SoundHive/static/js/58.d7aa85d0.chunk.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/SoundHive/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/About.jpg": "/SoundHive/static/media/About.47f14a569c8811cc957b.jpg",
+    "static/media/page-background.jpg": "/SoundHive/static/media/page-background.54aa5b623c3d3b349f84.jpg",
+    "static/media/robot.png": "/SoundHive/static/media/robot.b923b22b96d404e82095.png",
+    "static/media/Background-image.jpg": "/SoundHive/static/media/Background-image.9724b725c3252fabd382.jpg",
+    "index.html": "/SoundHive/index.html",
+    "main.cea8241d.css.map": "/SoundHive/static/css/main.cea8241d.css.map",
+    "main.03d6fdc1.js.map": "/SoundHive/static/js/main.03d6fdc1.js.map",
+    "58.d7aa85d0.chunk.js.map": "/SoundHive/static/js/58.d7aa85d0.chunk.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/SoundHive/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cea8241d.css",
+    "static/js/main.03d6fdc1.js"
+  ]
+}
